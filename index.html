@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30shine</title>
+    <link href="./assets/css/reset.css" rel="stylesheet">
+    <link href="./assets/css/grid.css" rel="stylesheet">
+    <link href="./assets/css/abstract.css" rel="stylesheet">
+    <link href="./assets/css/button.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/model-login.css" rel="stylesheet">
+    <link href="./assets/css/toast-mess.css" rel="stylesheet">
+    <link href="./assets/css/media.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <div class="app">
+        <div id="toast"></div>
+        <div class="header">
+            <div class="grid wide">
+                <div class="header-navbar col l-0">
+                    <a class="header-navbar__logo">
+                        <img src="./assets/imgs/log-30shine-white.9945e644.jpg" 
+                        alt="" class="header-navbar__logo-img">
+                    </a>
+                    <div class="header-navbar__menu">
+                        <ul class="header-navbar__list">
+                            <li class="header-navbar__item"><a href="#" class="header-navbar__link">Trải nghiệm dịch vụ</a></li>
+                            <!-- <li class="header-navbar__item"><a href="#" class="header-navbar__link">Hành trình tỏa sáng</a></li> -->
+                            <li class="header-navbar__item"><a href="#" class="header-navbar__link">Khám phá kiểu tóc</a></li>
+                            <li class="header-navbar__item"><a href="#" class="header-navbar__link">30shine shop</a></li>
+                            <li class="header-navbar__item"><a href="#" class="header-navbar__link">Tìm 30shine gần nhất</a></li>
+                            <li class="header-navbar__item"><a href="#" class="header-navbar__link">Tuyển dụng</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-navbar__login">
+                        <button class="btn header-navbar__login-btn" id="btn-login">
+                            <span class="header-navbar__login--icon">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </span>
+                            Đăng nhập
+                        </button>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <!-- setup banner -->
+        <div id="banner" class="banner">           
+                <span class="banner-control banner-control--left" onclick="clickNextSlide()">
+                    <i class="banner-control__icon fa fa-angle-left" aria-hidden="true"></i>       
+                </span>
+                <div class="banner-model">
+                    <div class="banner-model__heading">
+                        <span class="banner-model__heading--main">ĐẶT LỊCH GIỮ CHỖ CHỈ 30 GIÂY</span>
+                        <span class="banner-model__heading--sub">Cắt xong trả tiền, hủy lịch không sao</span>
+                    </div>
+                    <div class="banner-model__control">
+                        <input type="text" id="txtInputPhone" class="banner-model__input" placeholder="Nhập SĐT để đặt lịch" >
+                        <button class="banner-model__button btn" id="banner-model__btn">đặt lịch ngay</button>
+                    </div>                   
+                </div>
+                <span class="banner-control banner-control--right" onclick="clickNextSlide()">
+                    <i class="banner-control__icon fa fa-angle-right" aria-hidden="true"></i>       
+                </span>           
+        </div>
+        <div class="content">
+            <div class="grid wide">
+                <div class="content-service layout">
+                    <div class="head">
+                        <div class="head__title">
+                            <div class="head__title--main">Trải nghiệm dịch vụ</div>
+                            <div class="head__title--sub">Thư giãn 30 phút và bạn sẽ tỏa sáng</div>
+                        </div>
+                        <a href="#" class="head__view-all">
+                            Xem tất cả
+                            <span class="head__view-all--icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i> 
+                            </span>
+                        </a>
+                    </div>
+                    <a href="#" class="content-banner">
+                        <img src="./assets/imgs/banner-dich-vu.jpg" alt="#" class="content-banner__img">
+                    </a>
+                    <div class="row layout">
+                        <div class="col l-3 m-12 c-12 ">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/30shine-cat-goi-massage-2.jpg" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">Cắt gội massage</div>
+                                    <div class="list__item-text--sub">Bảng giá 2021 (hấp dẫn)</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/30shine-uon-2.jpg" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">Uốn ( chỉ từ 234k )</div>
+                                    <div class="list__item-text--sub">1 dịch vụ</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/30shine-nhuom-2.jpg" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">Nhuộm ( chỉ từ 162k )</div>
+                                    <div class="list__item-text--sub">4 dịch vụ</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/30shine-dich-vu-khac-2.jpg" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">Dịch vụ khác</div>
+                                    <div class="list__item-text--sub">4 dịch vụ</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="serve layout">
+                <div class="wide grid">
+                    <div class="head">
+                        <div class="head__title">
+                            <div class="head__title--main">Lắng nghe và tận tâm</div>
+                            <div class="head__title--sub">Thấu hiểu nhu cầu và hổ trợ nhiệt tình</div>
+                        </div>
+                        <!-- <a href="#" class="head__view-all">
+                            Xem tất cả
+                            <span class="head__view-all--icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i> 
+                            </span>
+                        </a> -->
+                    </div>
+                    <div class="row layout-20">
+                        <div class="serve-content__list col l-3 m-12 c-12">
+                            <div class="blog__item">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/lang-nghe-tan-tam-1.jpg" alt="#"
+                                        class="blog__media-img">
+                                </div>
+                                <span class="blog__text">Nói gì với stylist để có kiểu tóc ưng ý</span>
+                            </div>                            
+                        </div>
+                        <div class="serve-content__list col l-3 m-12 c-12">                           
+                            <div class="blog__item">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/lang-nghe-tan-tam-3.jpg" alt="#"
+                                        class="blog__media-img">
+                                </div>
+                                <span class="blog__text">Những câu hỏi thường gặp</span>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-posts">
+                <div class="wide grid">
+                    <div class="head">
+                        <div class="head__title">
+                            <div class="head__title--main">Trải nghiệm dịch vụ</div>
+                            <div class="head__title--sub">Thư giãn 30 phút và bạn sẽ tỏa sáng</div>
+                        </div>
+                        <a href="#" class="head__view-all">
+                            Xem tất cả
+                            <span class="head__view-all--icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i> 
+                            </span>
+                        </a>
+                    </div>
+                    <div class="row post__list layout-20">
+                        <span class="banner-control banner-control--left" onclick="clickNextSlide()">
+                            <i class="banner-control__icon fa fa-angle-left" aria-hidden="true"></i>       
+                        </span>
+                        <div class="col l-6 height-100">
+                            <a href="#" class="blog__item">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30shine-thay-doi-ngoai-hinh.jpg" alt="#"
+                                        class="blog__media-img">
+                                </div>
+                                <span class="blog__text">Thay đổi ngoại hình, chàng trai lạnh lùng ít nói khiến cô hoa khôi rung động</span>
+                            </a>
+                        </div>
+                        <div class="col l-6 height-100">
+                            <a href="#" class="blog__item">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30shine-nam-sinh-kien-truc-lot-xac.jpg" alt="#"
+                                        class="blog__media-img">
+                                </div>
+                                <span class="blog__text">Can đảm thay đổi mái tóc 7 năm, nam sinh thay đổi kiểu tóc mới cực đẹp</span>
+                            </a>
+                        </div>
+                        <span class="banner-control banner-control--right" onclick="clickNextSlide()">
+                            <i class="banner-control__icon fa fa-angle-right" aria-hidden="true"></i>       
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- introduce -->
+            <div class="content-introduce layout">
+                <div class="wide grid">
+                    <div class="head">
+                        <div class="head__title">
+                            <div class="head__title--main">Lắng nghe và tận tâm</div>
+                            <div class="head__title--sub">Thấu hiểu nhu cầu và hổ trợ nhiệt tình</div>
+                        </div>
+                    </div>
+                    <div class="layout-20">
+                        <div class="content-banner relative">
+                            <img src="./assets/imgs/30shine-banner-khong-gian-salon.jpg" 
+                            alt="#" class="content-banner__img">
+                            <div class="banner__wrapper">
+                                <div class="banner__text">
+                                    Phá vỡ giới hạn của một tiệm tóc truyền thống,
+                                     30Shine mang đến không gian trải nghiệm hoàn toàn mới với diện tích lớn
+                                      trên 200m2/ 16 ghế cắt. Tất cả đều được đặt tại vị trí dễ tìm trên những con phố lớn,
+                                     hòa vào cuộc sống sôi động của người đàn ông hiện đại.
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row layout-20">
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/30shinecon-cept-khong-gian-rong-lon-1.jpg" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">Salon rộng lớn dễ tìm</div>
+                                    <div class="list__item-text--sub">Không gian mở và kết nối</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/30shinecon-cept-khong-gian-rong-lon-2.jpg" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">Trang thiết bị 30shine</div>
+                                    <div class="list__item-text--sub">Nâng cấp trải nghiệm làm đẹp</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/30shinecon-cept-khong-gian-rong-lon-3.jpg" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">Làm chủ thời gian</div>
+                                    <div class="list__item-text--sub">Đặt lịch và các tiện ích 30shine App</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/30shine-concept-khong-gian-rong-lon-6.jpg" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">Trải nghiệm âm nhạc</div>
+                                    <div class="list__item-text--sub">Năng lượng và cảm xúc</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- product-sale -->
+            <div class="content-product-sale layout">
+                <div class="wide grid">
+                    <div class="head">
+                        <div class="head__title">
+                            <div class="head__title--main">Ưu đãi</div>
+                            <div class="head__title--sub">Quà tặng, chiết khấu được cập nhật liên tục</div>
+                        </div>
+                        <a href="#" class="head__view-all">
+                            Xem tất cả
+                            <span class="head__view-all--icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i> 
+                            </span>
+                        </a>
+                    </div>
+                    <div class="blog__list row layout-20">
+                        <span class="banner-control banner-control--left" onclick="clickNextSlide()">
+                            <i class="banner-control__icon fa fa-angle-left" aria-hidden="true"></i>       
+                        </span>
+                        <div class="col l-4 m-12 c-12">
+                            <a href="#" class="blog__item">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/small_ACSYS_vuong_4db7dc1695.jpg" alt="#"
+                                        class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 blog__text-product-sale">Nói gì với stylist để có kiểu tóc ưng ý</span>
+                            </a> 
+                        </div>                       
+                        <div class="col l-4 m-12 c-12">
+                            <a href="#" class="blog__item">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/small_Mood_dep_trai_11_7298a8b45d.jpg" alt="#"
+                                        class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 blog__text-product-sale">Nói gì với stylist để có kiểu tóc ưng ý</span>
+                            </a> 
+                        </div>                       
+                        <div class="col l-4 m-12 c-12">
+                            <a href="#" class="blog__item">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/small_Mood_dep_trai_9_ea25c333c8.jpg" alt="#"
+                                        class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 blog__text-product-sale">Nói gì với stylist để có kiểu tóc ưng ý</span>
+                            </a> 
+                        </div>  
+                        <span class="banner-control banner-control--right" onclick="clickNextSlide()">
+                            <i class="banner-control__icon fa fa-angle-right" aria-hidden="true"></i>       
+                        </span>                     
+                    </div>
+                </div>
+            </div>
+            <!-- product -->
+            <div class="content-products">
+                <div class="wide grid">
+                    <div class="head">
+                        <div class="head__title">
+                            <div class="head__title--main">30shine shop</div>
+                            <div class="head__title--sub">Mỹ phẩm nam cao cấp chính hãng</div>
+                        </div>
+                        <a href="#" class="head__view-all">
+                            Xem tất cả
+                            <span class="head__view-all--icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i> 
+                            </span>
+                        </a>
+                    </div>
+                    <a href="#" class="content-banner">
+                        <img src="./assets/imgs/211001_Banner_store_pc.jpg" alt="#" class="content-banner__img">
+                    </a>
+                    <div class="relative">
+                        <span class="banner-control banner-control--left" onclick="clickNextSlide()">
+                            <i class="banner-control__icon fa fa-angle-left" aria-hidden="true"></i>       
+                        </span>  
+                        <div class="blog__list scroll-x row layout-20">  
+                                    
+                            <div class="blog__item col l-3 m-12 c-12">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30S08QAL-Máy Cạo Râu FLYCO - USP.png" alt="" class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color">Máy cạo râu FLYCO FS8712 2 lưỡi</span>
+                                <span class="blog__text limits-text-2 padding-left-right-25 margin-15 black-color">400000đ</span>
+                                <button class="btn product-btn margin-15">
+                                    <span class="product-btn__text">Mua ngay</span>
+                                    <span class="product-btn__icon">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="blog__item col l-3 m-12 c-12">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30SWZ9B5-Máy sấy Furin.png" alt="" class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color">Máy sấy tóc Furin - Mạnh gấp 10 máy sấy bạn có</span>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color margin-15">389000đ</span>
+                                <button class="btn product-btn margin-15">
+                                    <span class="product-btn__text">Mua ngay</span>
+                                    <span class="product-btn__icon">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="blog__item col l-3 m-12 c-12">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30SZCK0C-SÁP KHỬ MÙI HÀNG NGÀY ETIAXIL.png" alt="" class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color">SÁP KHỬ MÙI HÀNG NGÀY ETIAXIL</span>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color margin-15">237000đ</span>
+                                <button class="btn product-btn margin-15">
+                                    <span class="product-btn__text">Mua ngay</span>
+                                    <span class="product-btn__icon">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="blog__item col l-3 m-12 c-12">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30SNC7NT-Máy Cạo Râu FLYCO FS871 2 lưỡi.png" alt="" class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color">Xịt Khử Mùi Vùng Da Dưới Cánh Tay ETIAXIL 100ml</span>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color margin-15">237000đ</span>
+                                <button class="btn product-btn margin-15">
+                                    <span class="product-btn__text">Mua ngay</span>
+                                    <span class="product-btn__icon">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="blog__item col l-3 m-12 c-12">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30SNC7NT-Máy Cạo Râu FLYCO FS871 2 lưỡi.png" alt="" class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color">Xịt Khử Mùi Vùng Da Dưới Cánh Tay ETIAXIL 100ml</span>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color margin-15">237000đ</span>
+                                <button class="btn product-btn margin-15">
+                                    <span class="product-btn__text">Mua ngay</span>
+                                    <span class="product-btn__icon">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="blog__item col l-3 m-12 c-12">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30SNC7NT-Máy Cạo Râu FLYCO FS871 2 lưỡi.png" alt="" class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color">Xịt Khử Mùi Vùng Da Dưới Cánh Tay ETIAXIL 100ml</span>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color margin-15">237000đ</span>
+                                <button class="btn product-btn margin-15">
+                                    <span class="product-btn__text">Mua ngay</span>
+                                    <span class="product-btn__icon">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="blog__item col l-3 m-12 c-12">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30SNC7NT-Máy Cạo Râu FLYCO FS871 2 lưỡi.png" alt="" class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color">Xịt Khử Mùi Vùng Da Dưới Cánh Tay ETIAXIL 100ml</span>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color margin-15">237000đ</span>
+                                <button class="btn product-btn margin-15">
+                                    <span class="product-btn__text">Mua ngay</span>
+                                    <span class="product-btn__icon">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="blog__item col l-3 m-12 c-12">
+                                <div class="blog__media">
+                                    <img src="./assets/imgs/30SNC7NT-Máy Cạo Râu FLYCO FS871 2 lưỡi.png" alt="" class="blog__media-img">
+                                </div>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color">Xịt Khử Mùi Vùng Da Dưới Cánh Tay ETIAXIL 100ml</span>
+                                <span class="blog__text limits-text-2 padding-left-right-25 black-color margin-15">237000đ</span>
+                                <button class="btn product-btn margin-15">
+                                    <span class="product-btn__text">Mua ngay</span>
+                                    <span class="product-btn__icon">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            
+                        </div>
+                        <span class="banner-control banner-control--right" onclick="clickNextSlide()">
+                            <i class="banner-control__icon fa fa-angle-right" aria-hidden="true"></i>       
+                        </span>
+                    </div>                 
+                </div>
+            </div>
+            <div class="content-care-custom layout">
+                <div class="wide grid">
+                    <div class="head layout-20">
+                        <div class="head__title">
+                            <div class="head__title--main">30shine shop</div>
+                            <div class="head__title--sub">Mỹ phẩm nam cao cấp chính hãng</div>
+                        </div>
+                    </div>
+                    <div class="content-banner relative">
+                        <img src="./assets/imgs/banner-30shine-care-5.jpg" 
+                        alt="#" class="content-banner__img">
+                        <div class="banner__wrapper">
+                            <div class="banner__text">
+                               <div class="banner__text--main">VÌ CHẤT LƯỢNG PHỤC VỤ LÀ HÀNG ĐẦU</div>
+                               <div class="banner__text--sub">Áp dụng tại salon bất kỳ toàn hệ thống 30Shine</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blog__list layout-20 row">
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/1-care.png" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">3 ngày</div>
+                                    <div class="list__item-text--sub">Đổi / trả hàng miễn phí</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/2-care.png" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">7 ngày</div>
+                                    <div class="list__item-text--sub">Chỉnh sửa tóc miễn phí</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/3-care.png" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">15 ngày</div>
+                                    <div class="list__item-text--sub">Bảo hành uốn nhuộm</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-12 c-12">
+                            <a href="#" class="list__item">
+                                <div class="list__item-media">
+                                    <img src="./assets/imgs/4-care.png" 
+                                    alt="" class="list__item-media-img">
+                                </div>
+                                <div class="list__item-text">
+                                    <div class="list__item-text--main">Giảm 20%</div>
+                                    <div class="list__item-text--sub">Giảm 20% nếu chờ đợi quá lâu</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4 footer-item">
+                        <div class="footer-item__heading">CÔNG TY CỔ PHẦN TMDV 30SHINE</div>
+                        <div class="footer-item__detail">
+                            <ul class="footer-item__detail-list">
+                                <li class="footer-item__detail-item">
+                                    82 Trần Đại Nghĩa, P. Đồng Tâm, Q. Hai Bà Trưng, HN
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Số giấy chứng nhận kinh doanh: 010.7467.693
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Ngày cấp: 08/06/2016
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <a href="#" class="footer-item__detail-link">Chính sách bảo mật thông tin</a>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <a href="#" class="footer-item__detail-link">Liên hệ quảng cáo 30shine</a>
+                                </li>
+                                
+                                <li class="footer-item__detail-item">
+                                    <div class="footer-logo">
+                                        <img src="./assets/imgs/congthuongicon.png" alt="#">
+                                        <img src="./assets/imgs/dmca_protected_26_120.png" alt="#">
+                                    </div>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Chấp nhận thanh toán
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <div class="footer-logo">
+                                        <img src="./assets/imgs/visa.a04c8520.svg" alt="#">
+                                        <img src="./assets/imgs/mastercard.1c44b057.svg" alt="#">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-4">
+                        <div class="footer-item__heading">GIỜ PHỤC VỤ</div>
+                        <div class="footer-item__detail">
+                            <ul class="footer-item__detail-list">
+                                <li class="footer-item__detail-item">
+                                    Thứ 2 đến thứ 6: 8h00 - 21h00
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Thứ 7, chủ nhật: 7h30 - 21h00
+                                </li>
+                                <li class="footer-item__detail-item layout-20">
+                                    <div class="footer-hotline">
+                                        <a href="tel:0337122712" class="footer-hotline__text">
+                                            <span class="footer-hotline__icon">
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                            </span>
+                                            1800.28.28.30 (Miễn phí)
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="col l-4">
+                        <div class="footer-item__heading">TẢI ỨNG DỤNG CỦA 30SHINE</div>
+                        <div class="footer-item__detail">
+                            <ul class="footer-item__detail-list">
+                                <li class="footer-item__detail-item">
+                                    Trải nghiệm đặt lịch nhanh chóng và
+                                     nhiều tiện ích khác với ứng dụng 30Shine.
+                                </li>
+                                <li class="footer-item__detail-item layout-20">
+                                    <div class="footer-logo">
+                                        <img src="./assets/imgs/download.png" alt="#">
+                                        <img src="./assets/imgs/download (1).png" alt="#">
+                                    </div>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <div class="footer-item__heading">tham gia cộng đồng</div>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Cùng 2.5tr thành viên 30shine
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <ul class="footer-item__detail-icons-list">
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="model" id="model">
+        <div class="model-login">
+            <div class="model-login__close" id="model-close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="model-login__heading">
+                <span class="model-login__heading--main">Đăng nhập</span>
+                <span class="model-login__heading--sub">Vui lòng nhập số điện thoại</span>
+            </div>
+            <div class="model-login__body">
+                <input type="text" class="model-login__body-input" placeholder="Ví dụ 033.xxx">
+            </div>
+            <div class="model-login__footer">
+                <button class="model-login__footer-btn btn">Tiếp tục</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/toast-message.js"></script>
+</body>
+</html>
