@@ -34,3 +34,13 @@ closeModelElement.addEventListener('click', function() {
     modelElement.classList.remove('block-display');
 })
 
+// close menu
+var openMenuElement = document.getElementById('open-menu-mobile');
+var closeMenuElement = document.getElementById('close-menu-mobile');
+var menuDownElement = document.getElementById('menu-down');
+openMenuElement.addEventListener('click', function() {
+    menuDownElement.style.display = 'block';
+});
+closeMenuElement.addEventListener('click', function() {
+    menuDownElement.style.display = 'none';
+});

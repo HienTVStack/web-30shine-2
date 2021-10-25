@@ -218,3 +218,17 @@
         width: 100%;
     }
 }
+@keyframes right-to-left-menu {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    /* 50% {
+        right: 0;
+    } */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        -webkit-transform: scale(1);
+    }
+}
