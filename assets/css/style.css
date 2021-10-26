@@ -309,6 +309,9 @@ html {
     color: var(--black-color);
     line-height: 20px;
 }
+.blog__media-img--product {
+    max-height: 350px;
+}
 
 /* footer */
 .footer {

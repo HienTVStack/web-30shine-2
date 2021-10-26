@@ -184,6 +184,12 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
+.limits-text-1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
 .padding-left-right-25 {
     padding-left: 25px;
     padding-right: 25px;
