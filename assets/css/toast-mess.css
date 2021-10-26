@@ -16,6 +16,7 @@
     padding: 20px 0;
     min-width: 375px;
     max-width: 400px;
+    width: 100%;
     border-left: 4px solid;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
     /* transform: translateX(calc(100% + 32px)); */
