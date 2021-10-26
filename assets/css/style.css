@@ -1,8 +1,11 @@
 html {
     font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
 }
 .app {
     overflow: hidden;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 .header {
     display: block;
@@ -16,6 +19,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 10px;
 }
 .header-navbar__logo {
     text-decoration: none;
@@ -26,7 +30,7 @@ html {
 }
 .header-navbar__menu {
     flex: 1;
-    /* display: block; */
+    display: block;
 }
 .header-navbar__menu-icon {
     font-size: 3.5rem;
@@ -42,9 +46,9 @@ html {
     justify-content: flex-end;
     
 }
-.header-navbar__item {
+/* .header-navbar__item {
 
-}
+} */
 .header-navbar__link {
     display: block;
     text-decoration: none;
@@ -92,9 +96,9 @@ html {
 .nav__down-heading__logo {
     height: 50px;
 }
-.header-nav__list {
+/* .header-nav__list {
 
-}
+} */
 .header-nav__item {
     margin-bottom: 25px;
 }
@@ -139,14 +143,16 @@ html {
 /* banner */
 
 .banner {
-    padding-bottom: 500px;
+    padding-bottom: 200px;
     background-image: url('../imgs/211001_BANNER_WEB_30SHINE_w.jpg');
     background-size: cover;
-    object-fit: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
     background-position: center;
     position: relative;
     /* animation: lefttorightAnimation ease 0.2s; */
     transition: all ease 0.5s;
+
 }
 
 .banner-control {
@@ -160,7 +166,7 @@ html {
     text-align: center;
     font-size: 2rem;
     line-height: 25px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -185,28 +191,30 @@ html {
     left: 0;
     right: 0;
     margin: 0 auto;
-    padding: 15px 20px;
-    bottom: 30px;
-    border-radius: 10px;
-    /* text-align: center; */
+    padding: 10px 12px;
+    /* bottom: 30px; */
+    border-radius: 5px;
     background: linear-gradient(180deg,#81274d,#c71155);
     max-width: 550px;
+    z-index: 1;
+    position: absolute;
+    bottom: -100px;
 }
-.banner-model__heading {
+/* .banner-model__heading {
 
-}
+} */
 .banner-model__heading--main {
     display: block;
-    font-size: 2.4rem;
-    line-height: 30px;
+    font-size: 1.8rem;
+    line-height: 20px;
     text-transform: uppercase;
     color: var(--white-color);
     font-weight: 400;
 }
 .banner-model__heading--sub {
     display: block;
-    font-size: 2rem;
-    line-height: 25px;
+    font-size: 1.5rem;
+    line-height: 17px;
     color: var(--white-color);
     font-weight: 300;
 }
@@ -230,23 +238,31 @@ html {
 .banner-model__button {
     background-color: var(--yellow-primary-color);
     text-transform: uppercase;
-    font-size: 2rem;
-    line-height: 25px;
-    padding: 15px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    padding: 10px;
     border-radius: 5px;
     margin-left: 10px;
     color: var(--black-color);
     font-weight: 600;
     font-family: oswald;
+    display: none;
+}
+.banner-model__button--mobile {
+    display: block;
+    min-width: 100px;
+    padding: 15px;
 }
 .banner-model__button:hover {
     opacity: 0.7;
 }
 
 /* content */
-.content {}
+.content {
+    margin-top: 10px;
+}
 .content-service {
-    
+    margin-top: 120px;
 }
 .content-banner {
     height: 350px;
@@ -299,9 +315,9 @@ html {
     background-color: var(--black-color);
     padding: 40px 0;
 }
-.footer-item {
+/* .footer-item {
 
-}
+} */
 .footer-item__heading {
     text-transform: uppercase;
     color: var(--white-color);
@@ -312,9 +328,9 @@ html {
 .footer-item__detail {
     margin-top: 10px;
 }
-.footer-item__detail-list {
+/* .footer-item__detail-list {
     
-}
+} */
 .footer-item__detail-item {
     font-size: 1.5rem;
     line-height: 17px;

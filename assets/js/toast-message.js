@@ -32,7 +32,7 @@ function toast({title= '', message = '', type = 'Info', duration = 3000}) {
                 <p class="toast__msg">${message}</p>
             </div>
             <div class="toast__close">
-                <i class="fas fa-times"></i>
+                 <i class="fa fa-times" aria-hidden="true"></i>
             </div>
         `;
         main.appendChild(toast);
@@ -77,6 +77,8 @@ function showNullInputNumberPhone() {
 // );
 
 var btnBannerElement = document.getElementById('banner-model__btn');
+var btnBannerElement_mobile = document.getElementById('banner-model__btn-mobile');
+
 var getTxtInputPhone = document.getElementById('txtInputPhone');
 btnBannerElement.addEventListener('click',function() {
     if(getTxtInputPhone.value === "") 
@@ -85,3 +87,10 @@ btnBannerElement.addEventListener('click',function() {
         showSuccessToast();
     }
 });
+btnBannerElement_mobile.addEventListener('click', function() {
+    if(getTxtInputPhone.value === "") 
+        showNullInputNumberPhone();
+    else {
+        showSuccessToast();
+    }
+})
